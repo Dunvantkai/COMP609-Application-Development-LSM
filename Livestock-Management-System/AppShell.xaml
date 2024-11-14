@@ -11,5 +11,8 @@
         <Tab Title="Database-Tab" Icon="chesspawn.png">
             <ShellContent ContentTemplate="{DataTemplate local:DatabasePage}" />
         </Tab>
+        <Tab Title="Query">
+            <ShellContent ContentTemplate="{DataTemplate local:QueryPage}" />
+        </Tab>
     </TabBar>
 </Shell>
