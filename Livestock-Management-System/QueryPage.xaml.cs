@@ -25,10 +25,10 @@ public partial class QueryPage : ContentPage
         double averageWeight = _database.CalculateAverageWeight(animals);
         double totalProduce = _database.CalculateTotalProduce(animals);
 
-        string details = $"Number of Livestocks({animalType} in {colour} colour): {animalCount}\n" +
-                         $"Percentage of selected livestock: {animalCountPercent:F0}%\n" +
-                         $"Daily Tax of selected livestock: ${dailyTax:F1}\n" +
+        string details = $"Number of Animals ({animalType} in {colour} colour): {animalCount}\n" +
+                         $"Daily Tax of selected Animals : ${dailyTax:F1}\n" +
                          $"{(dailyProfit > 0 ? "Profit" : "Loss")}: ${dailyProfit:F1}\n" +
+                         $"Percentage of selected Animals : {animalCountPercent:F0}%\n" +
                          $"Average Weight: {averageWeight:F1}kg\n" +
                          $"Total Produce: {totalProduce:F1}kg";
 

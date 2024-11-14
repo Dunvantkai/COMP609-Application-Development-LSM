@@ -10,7 +10,7 @@ public class MainViewModel
     {
         Animals = new();
         _database = new();
-        _database.ReadItems().ForEach(x => Animals.Add(x));
+        _database.ReadAnimals().ForEach(x => Animals.Add(x));
 
     }
 }
