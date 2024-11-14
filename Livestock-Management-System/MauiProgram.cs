@@ -20,6 +20,7 @@ namespace Livestock_Management_System
 #endif
             builder.Services.AddSingleton<MainViewModel>();
             builder.Services.AddTransient<DatabasePage>();
+            builder.Services.AddTransient<MainPage>();
 
             return builder.Build();
         }

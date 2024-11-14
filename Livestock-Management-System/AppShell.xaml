@@ -8,6 +8,9 @@
     Title="Livestock_Management_System">
 
     <TabBar>
+        <Tab Title="Main Page">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
         <Tab Title="Database-Tab">
             <ShellContent ContentTemplate="{DataTemplate local:DatabasePage}" />
         </Tab>
