@@ -31,7 +31,7 @@
                                    Text="Colour" />
                             <Label Grid.Column="5"
                                    TextColor="Black"
-                                   Text="Product (Milk/wool)" />
+                                   Text="Total Product (Milk/wool)" />
                         </Grid>
                     </CollectionView.Header>
                     <CollectionView.ItemTemplate>
@@ -66,7 +66,72 @@
                     </CollectionView.ItemTemplate>
                 </CollectionView>
             </Border>
-        </StackLayout>
+            <StackLayout Orientation="Vertical"
+             HorizontalOptions="Start"
+             Margin="60,20,0,0">
+
+                <!-- Horizontal Layout for Labels -->
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                    <Label Text="Insert Record"
+               FontSize="Medium"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               WidthRequest="260" />
+                    <Label Text="Update Record"
+               FontSize="Medium"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               WidthRequest="280" />
+                    <Label Text="Delete Record"
+               FontSize="Medium"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               WidthRequest="200" />
+                </StackLayout>
+
+                <!-- Main Content Layout -->
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+
+                    <!-- Insert Record Section -->
+                    <StackLayout Margin="0,0,40,0">
+                        <Label Text="Type:" />
+                        <Entry x:Name="TypeEntry" Placeholder="Type (cow/sheep)" WidthRequest="200"/>
+                        <Label Text="Cost:" />
+                        <Entry x:Name="CostEntry" Placeholder="Cost" WidthRequest="200" />
+                        <Label Text="Weight:" />
+                        <Entry x:Name="WeightEntry" Placeholder="Weight" WidthRequest="200" />
+                        <Label Text="Colour:" />
+                        <Entry x:Name="ColourEntry" Placeholder="Colour (black/red/white)" WidthRequest="200" />
+                        <Label Text="Product Amount" />
+                        <Entry x:Name="ProductEntry" Placeholder="Product" WidthRequest="200" />
+                        <Button Text="Insert" Clicked="OnInsertAnimalButtonClicked" />
+                    </StackLayout>
+
+                    <!-- Update Record Section -->
+                    <StackLayout Margin="40,0">
+                        <Label Text="ID:" />
+                        <Entry x:Name="UpdateIdEntry" Placeholder="ID" WidthRequest="200"/>
+                        <Label Text="Cost:" />
+                        <Entry x:Name="UpdateCostEntry" Placeholder="Cost" WidthRequest="200" />
+                        <Label Text="Weight:" />
+                        <Entry x:Name="UpdateWeightEntry" Placeholder="Weight" WidthRequest="200"/>
+                        <Label Text="Colour:" />
+                        <Entry x:Name="UpdateColourEntry" Placeholder="Colour (black/red/white)" WidthRequest="200" />
+                        <Label Text="Product Amount" />
+                        <Entry x:Name="UpdateProductEntry" Placeholder="Product" WidthRequest="200" />
+                        <Button Text="Update" Clicked="OnUpdateButtonClicked" />
+                    </StackLayout>
+
+                    <!-- Delete Record Section -->
+                    <StackLayout Margin="40,0">
+                        <Label Text="ID:" />
+                        <Entry x:Name="DeleteIdEntry" Placeholder="ID" WidthRequest="200" />
+                        <Button Text="Delete" Clicked="OnDeleteAnimalButtonClicked" />
+                    </StackLayout>
+
+                </StackLayout>
+            </StackLayout>
+        </StackLayout> 
     </ScrollView>
 </ContentPage>
     
