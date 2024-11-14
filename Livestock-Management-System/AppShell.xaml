@@ -20,5 +20,8 @@
         <Tab Title="Livestock-Statistics">
             <ShellContent ContentTemplate="{DataTemplate local:LivestockStatistics}"/>
         </Tab>
+        <Tab Title="Product Forecast">
+            <ShellContent ContentTemplate="{DataTemplate local:ProductForecast}"/>
+        </Tab>
     </TabBar>
 </Shell>

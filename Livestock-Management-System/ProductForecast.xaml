@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Livestock_Management_System.ProductForecast"
+             Title="ProductForecast">
+    <VerticalStackLayout Margin="0, 20" Spacing="10">
+        <Label Text="Profit Forecasts for Future Investments" FontSize="25" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="100000"/>
+        <Label Text="Enter Livestock Type" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" />
+        <Entry x:Name="TypeEntry" Placeholder="Cow/Sheep" HorizontalOptions="Center" WidthRequest="200" />
+
+        <Label Text="Enter investment quantity" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" />
+        <Entry x:Name="QuantityEntry" Placeholder="Enter number here" HorizontalOptions="Center" WidthRequest="200" />
+
+        <Button Text="Query Livestock" Clicked="OnForcastButtonClicked" HorizontalOptions="Center" WidthRequest="200" />
+
+        <Label Text="Results:" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" />
+        <ListView x:Name="ResultsListView" />
+    </VerticalStackLayout>
+</ContentPage>
