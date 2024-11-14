@@ -39,7 +39,7 @@ public partial class ProductForecast : ContentPage
         ResultsListView.ItemsSource = new[]
         {
 
-        $"Buying {quantity} {typeInput}(s) would bring in an estimated daily profit: ${totalProfit:F1}"
+        $"Buying {quantity} {typeInput}(s) would give you a daily profit ~: ${totalProfit:F1}"
     };
     }
 }
