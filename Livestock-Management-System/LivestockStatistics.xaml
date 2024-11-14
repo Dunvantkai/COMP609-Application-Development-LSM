@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Livestock_Management_System.LivestockStatistics"
+    <ScrollView>
+                <VerticalStackLayout Margin="0, 20" Spacing="10">
+                    <Label Text="Farm Livestock Statistics" FontSize="30" VerticalOptions="Center" HorizontalOptions="Center" />
+                    <ListView x:Name="StatisticsListView" />
+                </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
