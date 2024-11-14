@@ -16,6 +16,10 @@ namespace Livestock_Management_System;
     public double Weight { get; set; }
     public string Colour { get; set; }
     public string AnimalTypeName => GetType().Name;
+    public override string ToString()
+    {
+        return $"{this.GetType().Name,-15}{this.Name,-5}{this.Type,-5}{this.Id,-5}{this.Cost,-5}{this.Weight,-5}{this.Colour,-5}";
+    }
 }
     [SQLite.Table("Cow")]
     public class Cow : Animal

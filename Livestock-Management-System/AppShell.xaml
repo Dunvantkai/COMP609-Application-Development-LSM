@@ -7,9 +7,9 @@
     Shell.FlyoutBehavior="Disabled"
     Title="Livestock_Management_System">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:DatabasePage}"
-        Route="MainPage" />
-
+    <TabBar>
+        <Tab Title="Database-Tab" Icon="chesspawn.png">
+            <ShellContent ContentTemplate="{DataTemplate local:DatabasePage}" />
+        </Tab>
+    </TabBar>
 </Shell>
