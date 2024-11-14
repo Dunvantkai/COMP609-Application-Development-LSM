@@ -11,10 +11,10 @@
         <Tab Title="Main Page">
             <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
         </Tab>
-        <Tab Title="Database-Tab">
+        <Tab Title="Database">
             <ShellContent ContentTemplate="{DataTemplate local:DatabasePage}" />
         </Tab>
-        <Tab Title="Query-Tab">
+        <Tab Title="Query">
             <ShellContent ContentTemplate="{DataTemplate local:QueryPage}" />
         </Tab>
     </TabBar>
