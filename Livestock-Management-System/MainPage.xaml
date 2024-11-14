@@ -9,7 +9,7 @@
             Spacing="25">
             <Image
                 Source="sheep.png"
-                HeightRequest="600"
+                HeightRequest="300"
                 Aspect="AspectFit"
                 SemanticProperties.Description="dot net bot in a race car number eight" />
 
