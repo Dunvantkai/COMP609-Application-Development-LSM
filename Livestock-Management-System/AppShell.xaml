@@ -17,7 +17,7 @@
         <Tab Title="Query">
             <ShellContent ContentTemplate="{DataTemplate local:QueryPage}" />
         </Tab>
-        <Tab Title="Livestock-Statistics-Tab">
+        <Tab Title="Livestock-Statistics">
             <ShellContent ContentTemplate="{DataTemplate local:LivestockStatistics}"/>
         </Tab>
     </TabBar>
