@@ -8,10 +8,13 @@
     Title="Livestock_Management_System">
 
     <TabBar>
-        <Tab Title="Database-Tab">
+        <Tab Title="Main Page">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+        <Tab Title="Database">
             <ShellContent ContentTemplate="{DataTemplate local:DatabasePage}" />
         </Tab>
-        <Tab Title="Query-Tab">
+        <Tab Title="Query">
             <ShellContent ContentTemplate="{DataTemplate local:QueryPage}" />
         </Tab>
         <Tab Title="Livestock-Statistics-Tab">

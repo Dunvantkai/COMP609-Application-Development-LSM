@@ -66,69 +66,59 @@
                     </CollectionView.ItemTemplate>
                 </CollectionView>
             </Border>
-            <StackLayout Orientation="Vertical"
-             HorizontalOptions="Start"
-             Margin="60,20,0,0">
+            <StackLayout Orientation="Vertical" HorizontalOptions="Start" Margin="60,20,0,0">
 
-                <!-- Horizontal Layout for Labels -->
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
-                    <Label Text="Insert Record"
-               FontSize="Medium"
-               FontAttributes="Bold"
-               HorizontalOptions="Center"
-               WidthRequest="260" />
-                    <Label Text="Update Record"
-               FontSize="Medium"
-               FontAttributes="Bold"
-               HorizontalOptions="Center"
-               WidthRequest="280" />
-                    <Label Text="Delete Record"
-               FontSize="Medium"
-               FontAttributes="Bold"
-               HorizontalOptions="Center"
-               WidthRequest="200" />
+                <!-- Insert Record Section -->
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="10" Margin="0,10,0,0">
+                    <Label Text="Insert Record:" FontSize="Medium" FontAttributes="Bold" />
+                    <Label Text="Type:" VerticalOptions="Center" />
+                    <Entry x:Name="TypeEntry" Placeholder="Type (cow/sheep)" WidthRequest="100" />
+
+                    <Label Text="Cost:" VerticalOptions="Center" />
+                    <Entry x:Name="CostEntry" Placeholder="Cost" WidthRequest="100" />
+
+                    <Label Text="Weight:" VerticalOptions="Center" />
+                    <Entry x:Name="WeightEntry" Placeholder="Weight" WidthRequest="100" />
+
+                    <Label Text="Colour:" VerticalOptions="Center" />
+                    <Entry x:Name="ColourEntry" Placeholder="Colour (black/red/white)" WidthRequest="100" />
+
+                    <Label Text="Product Amount:" VerticalOptions="Center" />
+                    <Entry x:Name="ProductEntry" Placeholder="Product" WidthRequest="100" />
+
+                    <Button Text="Insert" Clicked="OnInsertAnimalButtonClicked" VerticalOptions="Center" />
                 </StackLayout>
 
-                <!-- Main Content Layout -->
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                <!-- Update Record Section -->
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="10" Margin="0,10,0,0">
+                    <Label Text="Update Record:" FontSize="Medium" FontAttributes="Bold" />
 
-                    <!-- Insert Record Section -->
-                    <StackLayout Margin="0,0,40,0">
-                        <Label Text="Type:" />
-                        <Entry x:Name="TypeEntry" Placeholder="Type (cow/sheep)" WidthRequest="200"/>
-                        <Label Text="Cost:" />
-                        <Entry x:Name="CostEntry" Placeholder="Cost" WidthRequest="200" />
-                        <Label Text="Weight:" />
-                        <Entry x:Name="WeightEntry" Placeholder="Weight" WidthRequest="200" />
-                        <Label Text="Colour:" />
-                        <Entry x:Name="ColourEntry" Placeholder="Colour (black/red/white)" WidthRequest="200" />
-                        <Label Text="Product Amount" />
-                        <Entry x:Name="ProductEntry" Placeholder="Product" WidthRequest="200" />
-                        <Button Text="Insert" Clicked="OnInsertAnimalButtonClicked" />
-                    </StackLayout>
+                    <Label Text="ID:" VerticalOptions="Center" />
+                    <Entry x:Name="UpdateIdEntry" Placeholder="ID" WidthRequest="100" />
 
-                    <!-- Update Record Section -->
-                    <StackLayout Margin="40,0">
-                        <Label Text="ID:" />
-                        <Entry x:Name="UpdateIdEntry" Placeholder="ID" WidthRequest="200"/>
-                        <Label Text="Cost:" />
-                        <Entry x:Name="UpdateCostEntry" Placeholder="Cost" WidthRequest="200" />
-                        <Label Text="Weight:" />
-                        <Entry x:Name="UpdateWeightEntry" Placeholder="Weight" WidthRequest="200"/>
-                        <Label Text="Colour:" />
-                        <Entry x:Name="UpdateColourEntry" Placeholder="Colour (black/red/white)" WidthRequest="200" />
-                        <Label Text="Product Amount" />
-                        <Entry x:Name="UpdateProductEntry" Placeholder="Product" WidthRequest="200" />
-                        <Button Text="Update" Clicked="OnUpdateButtonClicked" />
-                    </StackLayout>
+                    <Label Text="Cost:" VerticalOptions="Center" />
+                    <Entry x:Name="UpdateCostEntry" Placeholder="Cost" WidthRequest="100" />
 
-                    <!-- Delete Record Section -->
-                    <StackLayout Margin="40,0">
-                        <Label Text="ID:" />
-                        <Entry x:Name="DeleteIdEntry" Placeholder="ID" WidthRequest="200" />
-                        <Button Text="Delete" Clicked="OnDeleteAnimalButtonClicked" />
-                    </StackLayout>
+                    <Label Text="Weight:" VerticalOptions="Center" />
+                    <Entry x:Name="UpdateWeightEntry" Placeholder="Weight" WidthRequest="100" />
 
+                    <Label Text="Colour:" VerticalOptions="Center" />
+                    <Entry x:Name="UpdateColourEntry" Placeholder="Colour (black/red/white)" WidthRequest="100" />
+
+                    <Label Text="Product Amount:" VerticalOptions="Center" />
+                    <Entry x:Name="UpdateProductEntry" Placeholder="Product" WidthRequest="100" />
+
+                    <Button Text="Update" Clicked="OnUpdateButtonClicked" VerticalOptions="Center" />
+                </StackLayout>
+
+                <!-- Delete Record Section -->
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="10" Margin="0,10,0,0">
+                    <Label Text="Delete Record:" FontSize="Medium" FontAttributes="Bold" />
+
+                    <Label Text="ID:" VerticalOptions="Center" />
+                    <Entry x:Name="DeleteIdEntry" Placeholder="ID" WidthRequest="100" />
+
+                    <Button Text="Delete" Clicked="OnDeleteAnimalButtonClicked" VerticalOptions="Center" />
                 </StackLayout>
             </StackLayout>
         </StackLayout> 
