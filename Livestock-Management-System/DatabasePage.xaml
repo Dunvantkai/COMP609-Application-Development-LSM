@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Livestock_Management_System.DatabasePage"
-             Title="DatabasePage">
+             Title="Database Page">
 
     <ScrollView>
         <StackLayout Margin="20">
@@ -12,7 +12,7 @@
                 <CollectionView x:Name="DataListView"
                                 BackgroundColor="LightGray">
                     <CollectionView.Header>
-                        <Grid BackgroundColor="LightBlue"
+                        <Grid BackgroundColor="MediumPurple"
                               ColumnDefinitions="*,*,*,*,*,*">
                             <Label Grid.Column="0"
                                    TextColor="Black"
@@ -36,7 +36,7 @@
                     </CollectionView.Header>
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <Border BackgroundColor="LightGray"
+                            <Border BackgroundColor="White"
                                     StrokeShape="RoundRectangle 10">
                                 <Grid ColumnDefinitions="*,*,*,*,*,*">
                                     <Label Grid.Column="0"
