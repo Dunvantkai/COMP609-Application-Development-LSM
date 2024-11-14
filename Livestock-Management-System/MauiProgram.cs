@@ -18,6 +18,8 @@ namespace Livestock_Management_System
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+            builder.Services.AddSingleton<MainViewModel>();
+            builder.Services.AddTransient<DatabasePage>();
 
             return builder.Build();
         }
