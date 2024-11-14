@@ -1,22 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+namespace Livestock_Management_System;
 
-namespace Livestock_Management_System
+public class MainViewModel
 {
-    public class MainViewModel
+    public ObservableCollection<Animal> Animals { get; set; }
+    readonly Database _database;
+
+    public MainViewModel()
     {
-        public ObservableCollection<Animal> Animals { get; set; }
-        readonly Database _database;
+        Animals = new();
+        _database = new();
+        _database.ReadItems().ForEach(x => Animals.Add(x));
 
-        public MainViewModel()
-        {
-            Animals = new();
-            _database = new();
-            _database.ReadItems().ForEach(x => Animals.Add(x));
-
-        }
     }
 }

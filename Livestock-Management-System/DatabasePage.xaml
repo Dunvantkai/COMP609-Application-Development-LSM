@@ -3,62 +3,71 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Livestock_Management_System.DatabasePage"
              Title="DatabasePage">
-    <?xml version="1.0" encoding="utf-8" ?>
-        <Grid RowDefinitions="50,*">
 
-            <HorizontalStackLayout HorizontalOptions="Center">
-                <Button Clicked="AddClicked" Text="Add Dummy" />
-            </HorizontalStackLayout>
-            <Border
-            Grid.Row="1"
-            Margin="40,40"
-            BackgroundColor="Gray"
-            StrokeShape="RoundRectangle 10">
-                <CollectionView x:Name="DataListView" BackgroundColor="LightGrey">
+    <ScrollView>
+        <StackLayout Margin="20">
+            <Border Margin="40,40"
+                    BackgroundColor="Gray"
+                    StrokeShape="RoundRectangle 10">
+                <CollectionView x:Name="DataListView"
+                                BackgroundColor="LightGray">
                     <CollectionView.Header>
-                        <Grid BackgroundColor="LightBlue" ColumnDefinitions="*,*,*,*,*">
-                            <Label Grid.Column="0" Text="Id" />
-                            <Label Grid.Column="1" Text="Name" />
-                            <Label Grid.Column="2" Text="Number of staff" />
-                            <Label Grid.Column="3" Text="Number of tables" />
-                            <Label Grid.Column="4" Text="Number of stations" />
+                        <Grid BackgroundColor="LightBlue"
+                              ColumnDefinitions="*,*,*,*,*,*">
+                            <Label Grid.Column="0"
+                                   TextColor="Black"
+                                   Text="Type" />
+                            <Label Grid.Column="1"
+                                   TextColor="Black"
+                                   Text="Id" />
+                            <Label Grid.Column="2"
+                                   TextColor="Black"
+                                   Text="Cost" />
+                            <Label Grid.Column="3"
+                                   TextColor="Black"
+                                   Text="Weight" />
+                            <Label Grid.Column="4"
+                                   TextColor="Black"
+                                   Text="Colour" />
+                            <Label Grid.Column="5"
+                                   TextColor="Black"
+                                   Text="Product (Milk/wool)" />
                         </Grid>
                     </CollectionView.Header>
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                        <Border BackgroundColor="LightGray"
-        StrokeShape="RoundRectangle 10">
-                            <Grid ColumnDefinitions=",,,,,">
-                                <Label Grid.Column="0"
-               TextColor="Black"
-               Text="{Binding AnimalTypeName}" />
-                                <Label Grid.Column="1"
-               TextColor="Black"
-               Text="{Binding Id}" />
-                                <Label Grid.Column="2"
-               TextColor="Black"
-               Text="{Binding Cost}" />
-                                <Label Grid.Column="3"
-               TextColor="Black"
-               Text="{Binding Weight}" />
-                                <Label Grid.Column="4"
-               TextColor="Black"
-               Text="{Binding Colour}" />
-                                <Label Grid.Column="5"
-               TextColor="Black"
-               Text="{Binding Milk}" />
-                                <Label Grid.Column="5"
-               TextColor="Black"
-               Text="{Binding Wool}" />
-                            </Grid>
-                        </Border>
-
-                    </DataTemplate>
+                            <Border BackgroundColor="LightGray"
+                                    StrokeShape="RoundRectangle 10">
+                                <Grid ColumnDefinitions="*,*,*,*,*,*">
+                                    <Label Grid.Column="0"
+                                           TextColor="Black"
+                                           Text="{Binding AnimalTypeName}" />
+                                    <Label Grid.Column="1"
+                                           TextColor="Black"
+                                           Text="{Binding Id}" />
+                                    <Label Grid.Column="2"
+                                           TextColor="Black"
+                                           Text="{Binding Cost}" />
+                                    <Label Grid.Column="3"
+                                           TextColor="Black"
+                                           Text="{Binding Weight}" />
+                                    <Label Grid.Column="4"
+                                           TextColor="Black"
+                                           Text="{Binding Colour}" />
+                                    <Label Grid.Column="5"
+                                           TextColor="Black"
+                                           Text="{Binding Milk}" />
+                                    <Label Grid.Column="5"
+                                           TextColor="Black"
+                                           Text="{Binding Wool}" />
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
             </Border>
-        </Grid>
-  
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
     
     
